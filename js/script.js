@@ -24,6 +24,7 @@ $(document).ready(function () {
     addRow(index);
     colorUpdate(index);
     addTask(index);
+    getTask(index);
     index++;
     // console.log(startBusiness.hour());
     // console.log(moment().hour());
@@ -48,13 +49,19 @@ function colorUpdate(index) {
 function addTask(index) {
   const idButton = "#b" + index.toString();
   const idText = "#i" + index.toString();
-  const i = index;
   $(idButton).click(function () {
     var task = $(idText).val();
     console.log(task);
-    localStorage.setItem("key" + i.toString(), task);
+    localStorage.setItem("key" + index.toString(), task);
   });
 }
 
 //function to get tasks from localStorage
-function getTask() {}
+function getTask(index) {
+  const idText = "#i" + index.toString();
+  var item = localStorage.getItem("key" + index.toString());
+  if (item) {
+    // let data = JSON.parse(item);
+    $(idText).text(item);
+  }
+}
