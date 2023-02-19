@@ -1,4 +1,10 @@
-$("#currentDate").text(moment().format("dddd MMM Do"));
+$("#currentDate").text(moment().format("dddd MMM Do")); //displays current date
+
+let startBusiness = moment(09, "HH");
+while (startBusiness.hour() < 18) {
+  console.log(startBusiness.format("hha"));
+  startBusiness.add(1, "hours");
+}
 
 // var $addItem = $("#addItem");
 // var $tasks = $("#tasks");
