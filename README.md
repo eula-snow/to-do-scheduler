@@ -3,7 +3,7 @@
 ## Description
 
 This is a useful tool to add tasks to a schedule that was created with the use of JQuery and moment.js.
-[View](link)
+[View](https://eula-snow.github.io/to-do-scheduler/)
 
 ## Installation
 

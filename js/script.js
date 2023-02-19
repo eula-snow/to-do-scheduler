@@ -49,8 +49,9 @@ function addTask(index) {
   const idButton = "#b" + index.toString(); //id of button
   const idText = "#i" + index.toString();
   $(idButton).click(function () {
+    $("#alert").show().delay(500).fadeOut();
     var task = $(idText).val(); // gets text from textarea
-    console.log(task);
+    //console.log(task);
     localStorage.setItem("key" + index.toString(), task);
   });
 }
