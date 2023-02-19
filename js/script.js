@@ -1,3 +1,5 @@
+$("#currentDate").text(moment().format("dddd MMM Do"));
+
 // var $addItem = $("#addItem");
 // var $tasks = $("#tasks");
 
