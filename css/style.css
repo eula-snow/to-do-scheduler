@@ -1,5 +1,8 @@
+* {
+  box-sizing: border-box;
+}
 header {
-  margin-top: 4rem;
+  margin-top: 2rem;
   border-bottom: 10px solid black;
   text-align: center;
 }
@@ -16,26 +19,44 @@ h1 {
   font-size: 1.25rem;
 }
 .container {
-  text-align: center;
   padding: 20px;
 }
 
 #alert {
   display: none;
+  text-align: center;
 }
 
 .row {
   display: flex;
+  flex-direction: row;
   margin: 0 15px;
+  height: 80px;
+  max-width: 100%;
 }
 
 .time {
   border-top: 1px dashed black;
+  text-align: right;
+  flex: 1;
 }
 
 textarea {
   border-bottom: 1px solid white;
+
+  flex: 14;
+  padding: 10px;
+}
+
+.past {
   background-color: gray;
+}
+.present {
+  background-color: #ff6961;
+}
+
+.future {
+  background-color: #77dd77;
 }
 
 button {
@@ -46,7 +67,14 @@ button {
   border-left: 1px solid black;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
+  flex: 1;
 }
+
+button i:hover {
+  font-size: 20px;
+  transition: all 0.3s ease-in-out;
+}
+
 h1,
 form,
 button {
