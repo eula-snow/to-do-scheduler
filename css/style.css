@@ -48,23 +48,12 @@ textarea {
   padding: 10px;
 }
 
-/* .past {
-  background-color: gray;
-} 
-
-.present {
-  background-color: #ff6961;
-}
-
-.future {
-  background-color: #77dd77;
-} */
-
 button {
   background-color: #06aed5;
   color: white;
   font-size: 1.5rem;
-  text-align: justify;
+  display: block;
+  margin: 0 auto;
   border-left: 1px solid black;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
@@ -74,19 +63,4 @@ button {
 button i:hover {
   font-size: 20px;
   transition: all 0.3s ease-in-out;
-}
-
-h1,
-form,
-button {
-  text-align: center;
-}
-
-button {
-  display: block;
-  margin: 0 auto;
-}
-
-li {
-  background-color: aquamarine;
 }
