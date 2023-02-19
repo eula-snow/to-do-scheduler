@@ -1,8 +1,7 @@
-$("#currentDate").text(moment().format("dddd MMM Do")); //displays current date
-let $addItem = $("#addItem");
 let $main = $(".container");
 let startBusiness = moment(09, "H");
 //let index = 0;
+$("#currentDate").text(moment().format("dddd MMM Do")); //displays current date
 
 //function that creates a row with time, text area, and save button
 function addRow(index) {
@@ -28,14 +27,14 @@ $(document).ready(function () {
     index++;
     // console.log(startBusiness.hour());
     // console.log(moment().hour());
-    startBusiness.add(1, "hours");
+    startBusiness.add(1, "hours"); //adds an hour
   }
 });
 
 //function that updates textarea color
 function colorUpdate(index) {
-  const idText = "#i" + index.toString();
-  // console.log(idQuery);
+  const idText = "#i" + index.toString(); //id of textarea
+  // console.log(idText);
   if (startBusiness.hour() === moment().hour()) {
     $(idText).css("background-color", "#ff6961");
   } else if (startBusiness.hour() < moment().hour()) {
@@ -45,12 +44,12 @@ function colorUpdate(index) {
   }
 }
 
-//functon to add tasks to localStorage
+//functon to add tasks to localStorage when button is clicked
 function addTask(index) {
-  const idButton = "#b" + index.toString();
+  const idButton = "#b" + index.toString(); //id of button
   const idText = "#i" + index.toString();
   $(idButton).click(function () {
-    var task = $(idText).val();
+    var task = $(idText).val(); // gets text from textarea
     console.log(task);
     localStorage.setItem("key" + index.toString(), task);
   });
@@ -59,9 +58,8 @@ function addTask(index) {
 //function to get tasks from localStorage
 function getTask(index) {
   const idText = "#i" + index.toString();
-  var item = localStorage.getItem("key" + index.toString());
+  const item = localStorage.getItem("key" + index.toString());
   if (item) {
-    // let data = JSON.parse(item);
-    $(idText).text(item);
+    $(idText).text(item); //updates text in textarea
   }
 }
