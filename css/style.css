@@ -48,16 +48,17 @@ textarea {
   padding: 10px;
 }
 
-.past {
+/* .past {
   background-color: gray;
-}
+} 
+
 .present {
   background-color: #ff6961;
 }
 
 .future {
   background-color: #77dd77;
-}
+} */
 
 button {
   background-color: #06aed5;
